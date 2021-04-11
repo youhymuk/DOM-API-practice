@@ -1,0 +1,101 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  font-family: 'Gaegu', cursive;
+  overflow: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 3fr;
+  grid-template-areas: 
+    "nav main"
+    "nav main";
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)
+}
+
+.page__menu {
+  grid-area: nav;
+}
+
+.page__content {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("/images/rick-and-morty-logo.png") center / contain no-repeat;
+}
+
+.page__content--not-empty {
+  background-image: none;
+}
+
+.menu__list {
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.menu__btn {
+  display: block;
+  width: 100%;
+  padding: 12px 40px;
+  font-family: 'Gaegu', cursive;
+  font-size: 30px;
+  font-weight: bold;
+  color: #18ACC9;
+  text-shadow: 0 0 3px #D2DA4B;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.menu__btn--current {
+  box-shadow: inset 0 0 20px #48de42;
+}
+
+.character {
+  display: none;
+  align-items: center;
+}
+
+.character--current {
+  display: flex;
+}
+
+.character__title {
+  font-size: 45px;
+  text-align: center;
+  color: #48de42;
+  text-shadow: 0 0 3px #D2DA4B;
+  -webkit-text-stroke: 1px #D2DA4B;
+}
+
+.character__desc-list {
+  margin: 0 0 0 24px;
+  font-size: 26px;
+  color: #48de42;
+  text-shadow: 0 0 3px #D2DA4B;
+  -webkit-text-stroke: 1px #D2DA4B;
+}
+
+.character__desc-value {
+  margin-left: 10px;
+}
+
+.character__desc-item {
+  display: flex;
+}
