@@ -17,11 +17,12 @@ ul {
 
 .page {
   display: grid;
-  grid-template-columns: minmax(200px, 1fr) 3fr;
+  grid-template-columns: minmax(285px, 1fr) 3fr;
   grid-template-areas: 
     "nav main"
     "nav main";
   height: 100%;
+  min-width: 768px;
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)
 }
 
@@ -98,4 +99,13 @@ ul {
 
 .character__desc-item {
   display: flex;
+}
+
+@media (max-width: 1200px) {
+  .character {
+    flex-direction: column;
+  }
+  .character__desc-list {
+    margin: 24px 0 0 0;
+  }
 }

@@ -1,4 +1,4 @@
-const url = 'https://rickandmortyapi.com/api/character/';
+const url = './data.json';
 const pageContent = document.querySelector('.page__content');
 const navList = document.querySelector('.menu__list');
 
